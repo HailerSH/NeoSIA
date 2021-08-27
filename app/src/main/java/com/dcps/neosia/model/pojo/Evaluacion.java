@@ -18,7 +18,7 @@ public class Evaluacion extends EntityBase {
     @NonNull
     private String nombre;
     @NonNull
-    private float porcentaje;
+    private double porcentaje;
     @ColumnInfo(name = "grupo_id")
     private String grupoId;
 
@@ -35,11 +35,11 @@ public class Evaluacion extends EntityBase {
         this.nombre = nombre;
     }
 
-    public float getPorcentaje() {
+    public double getPorcentaje() {
         return porcentaje;
     }
 
-    public void setPorcentaje(float porcentaje) {
+    public void setPorcentaje(double porcentaje) {
         this.porcentaje = porcentaje;
     }
 

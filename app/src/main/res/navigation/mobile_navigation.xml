@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/nav_registrar_calificacion"
-        android:name="com.dcps.neosia.ui.registrar_calificacion.RegistrarCalificacionFragment"
+        android:name="com.dcps.neosia.ui.registrar_calificacion.GruposFragment"
         android:label="@string/menu_registrar_calificacion"
-        tools:layout="@layout/fragment_registrar_calificacion" />
+        tools:layout="@layout/fragment_grupos" />
 </navigation>

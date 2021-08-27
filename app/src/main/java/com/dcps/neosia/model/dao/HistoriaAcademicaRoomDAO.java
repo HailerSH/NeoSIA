@@ -19,6 +19,9 @@ public interface HistoriaAcademicaRoomDAO {
     @Query("SELECT * FROM historias_academicas WHERE id = :id")
     List<HistoriaAcademica> getById(String id);
 
+    @Query("SELECT * FROM historias_academicas WHERE estudiante_id = (SELECT id FROM estudiantes WHERE identidad = :identidad)")
+    List<HistoriaAcademica> getByEstudianteIdentidad(String identidad);
+
     @Insert
     void insertMany(HistoriaAcademica ... historiasAcademicas);
     @Insert

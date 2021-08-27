@@ -23,9 +23,7 @@ public class HistoriaAcademica extends EntityBase {
 
     @NonNull
     private String estado;
-    @NonNull
     private float porcentajeDeAvance;
-    @NonNull
     private int cupoDeCreditos;
     @ColumnInfo(name = "plan_de_estudios_id")
     private String planDeEstudiosId;

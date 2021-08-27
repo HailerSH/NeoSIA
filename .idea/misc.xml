@@ -9,11 +9,14 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/estudiantes_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_consultar_asignatura.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_consultar_historia_academica.xml" value="0.18885869565217392" />
+        <entry key="app/src/main/res/layout/fragment_estudiantes.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_grupos.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_registrar_calificacion.xml" value="0.18885869565217392" />
-        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_registrar_calificacion.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.5" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21041666666666667" />

@@ -1,5 +1,7 @@
 package com.dcps.neosia.ui.registrar_calificacion;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.dcps.neosia.R;
 
@@ -25,6 +28,7 @@ public class RegistrarCalificacionFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
         return inflater.inflate(R.layout.fragment_registrar_calificacion, container, false);
     }
 
@@ -34,5 +38,4 @@ public class RegistrarCalificacionFragment extends Fragment {
         mViewModel = new ViewModelProvider(this).get(RegistrarCalificacionViewModel.class);
         // TODO: Use the ViewModel
     }
-
 }

@@ -19,6 +19,9 @@ public interface PlanDeEstudiosRoomDAO {
     @Query("SELECT * FROM planes_de_estudios WHERE id = :id")
     List<PlanDeEstudios> getById(String id);
 
+    @Query("SELECT * FROM planes_de_estudios WHERE codigo = :codigo")
+    List<PlanDeEstudios> getByCodigo(String codigo);
+
     @Insert
     void insertMany(PlanDeEstudios... planesDeEstudios);
     @Insert

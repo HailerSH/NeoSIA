@@ -6,6 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import com.dcps.neosia.model.pojo.Docente;
 import com.dcps.neosia.model.pojo.Estudiante;
 import com.dcps.neosia.model.pojo.User;
 
@@ -22,6 +23,9 @@ public interface EstudianteRoomDAO {
 
     @Query("SELECT * FROM estudiantes WHERE username = :username")
     List<Estudiante> getByUsername(String username);
+
+    @Query("SELECT * FROM estudiantes WHERE identidad = :identidad")
+    List<Estudiante> getByIdentidad(String identidad);
 
     @Insert
     void insertMany(Estudiante ... estudiantes);

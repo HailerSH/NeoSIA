@@ -16,7 +16,7 @@ import com.dcps.neosia.model.EntityBase;
 public class Calificacion extends EntityBase {
 
     @NonNull
-    private float valor;
+    private double valor;
     @ColumnInfo(name = "evaluacion_id")
     private String evaluacionId;
 
@@ -24,11 +24,11 @@ public class Calificacion extends EntityBase {
         super();
     }
 
-    public float getValor() {
+    public double getValor() {
         return valor;
     }
 
-    public void setValor(float valor) {
+    public void setValor(double valor) {
         this.valor = valor;
     }
 
