@@ -91,7 +91,7 @@ public class InitialInformationDBController {
     }
 
 
-    private void createPersonas() {
+    private void createEstudiantes() {
         Estudiante estudiante = new Estudiante();
 
         estudiante.setUsername("ncapdetm");
@@ -110,7 +110,7 @@ public class InitialInformationDBController {
         estudiante.setTipoDeSangre("O+");
         estudiante.setDireccion("Conjunto Nebraska, Robledo");
 
-        this.personaRoomDAO.insertOne(estudiante);
+        this.estudianteRoomDAO.insertOne(estudiante);
     }
 
     private void createDocentes() {
@@ -237,8 +237,8 @@ public class InitialInformationDBController {
     }
 
     public void addInformation() {
-        if (this.userRoomDAO.getAll().size() == 0) {
-            createPersonas();
+        if (this.estudianteRoomDAO.getAll().size() == 0) {
+            createEstudiantes();
             createDocentes();
             createAdministrativeInformation();
             createHistoriaAcademica20201s();

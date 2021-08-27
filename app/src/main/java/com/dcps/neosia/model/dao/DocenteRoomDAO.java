@@ -7,6 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.dcps.neosia.model.pojo.Docente;
+import com.dcps.neosia.model.pojo.Estudiante;
 
 import java.util.List;
 
@@ -18,6 +19,9 @@ public interface DocenteRoomDAO {
 
     @Query("SELECT * FROM docentes WHERE id = :id")
     List<Docente> getById(String id);
+
+    @Query("SELECT * FROM docentes WHERE username = :username")
+    List<Docente> getByUsername(String username);
 
     @Query("SELECT * FROM docentes WHERE identidad = :identidad")
     List<Docente> getByIdentidad(String identidad);
