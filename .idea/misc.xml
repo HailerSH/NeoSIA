@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.18885869565217392" />
         <entry key="app/src/main/res/layout/fragment_consultar_historia_academica.xml" value="0.18885869565217392" />
         <entry key="app/src/main/res/layout/fragment_registrar_calificacion.xml" value="0.18885869565217392" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19427083333333334" />

@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">NeoSIA</string>
+
+    <string name="logo_unal">Logo UNAL</string>
+    <string name="username_input">Usuario</string>
+    <string name="password_input">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+
+    <string name="action_sign_off">Cerrar Sesión</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
