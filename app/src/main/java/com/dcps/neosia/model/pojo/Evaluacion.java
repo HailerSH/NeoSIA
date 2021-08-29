@@ -9,9 +9,10 @@ import com.dcps.neosia.model.EntityBase;
 
 @Entity(tableName = "evaluaciones",
         foreignKeys = {@ForeignKey(entity = Grupo.class,
-                parentColumns = "id",
-                childColumns = "grupo_id",
-                onDelete = ForeignKey.CASCADE)}
+                                   parentColumns = "id",
+                                   childColumns = "grupo_id",
+                                   onDelete = ForeignKey.CASCADE)
+                      }
         )
 public class Evaluacion extends EntityBase {
 

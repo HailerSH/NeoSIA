@@ -6,9 +6,10 @@ import androidx.room.ForeignKey;
 
 @Entity(tableName = "docentes",
         foreignKeys = {@ForeignKey(entity = Departamento.class,
-                parentColumns = "id",
-                childColumns = "departamento_id",
-                onDelete = ForeignKey.CASCADE)}
+                                   parentColumns = "id",
+                                   childColumns = "departamento_id",
+                                   onDelete = ForeignKey.CASCADE)
+                       }
         )
 public class Docente extends Persona {
 

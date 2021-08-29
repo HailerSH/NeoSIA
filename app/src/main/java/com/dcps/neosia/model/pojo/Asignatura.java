@@ -8,15 +8,15 @@ import androidx.room.ForeignKey;
 import com.dcps.neosia.model.EntityBase;
 
 @Entity(tableName = "asignaturas",
-        foreignKeys = {
-            @ForeignKey(entity = PeriodoAcademico.class,
-                        parentColumns = "id",
-                        childColumns = "periodo_academico_id",
-                        onDelete = ForeignKey.CASCADE),
-            @ForeignKey(entity = AreaCurricular.class,
-                        parentColumns = "id",
-                        childColumns = "area_curricular_id",
-                        onDelete = ForeignKey.CASCADE)}
+        foreignKeys = {@ForeignKey(entity = PeriodoAcademico.class,
+                                   parentColumns = "id",
+                                   childColumns = "periodo_academico_id",
+                                   onDelete = ForeignKey.CASCADE),
+                       @ForeignKey(entity = AreaCurricular.class,
+                                   parentColumns = "id",
+                                   childColumns = "area_curricular_id",
+                                   onDelete = ForeignKey.CASCADE)
+                       }
         )
 public class Asignatura extends EntityBase {
 

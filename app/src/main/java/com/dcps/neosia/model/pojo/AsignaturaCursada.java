@@ -8,11 +8,15 @@ import androidx.room.ForeignKey;
 import com.dcps.neosia.model.EntityBase;
 
 @Entity(tableName = "asignaturas_cursadas",
-        foreignKeys = {
-            @ForeignKey(entity = Grupo.class,
-                        parentColumns = "id",
-                        childColumns = "grupo_id",
-                        onDelete = ForeignKey.CASCADE)}
+        foreignKeys = {@ForeignKey(entity = Grupo.class,
+                                   parentColumns = "id",
+                                   childColumns = "grupo_id",
+                                   onDelete = ForeignKey.CASCADE),
+                       @ForeignKey(entity = HistoriaAcademica.class,
+                                   parentColumns = "id",
+                                   childColumns = "historia_academica_id",
+                                   onDelete = ForeignKey.CASCADE)
+                       }
         )
 public class AsignaturaCursada extends EntityBase {
 
@@ -22,6 +26,8 @@ public class AsignaturaCursada extends EntityBase {
     private double notaFinal;
     @ColumnInfo(name = "grupo_id")
     private String grupoId;
+    @ColumnInfo(name = "historia_academica_id")
+    private String historiaAcademicaId;
 
     public AsignaturaCursada() {
         super();
@@ -50,5 +56,13 @@ public class AsignaturaCursada extends EntityBase {
 
     public void setGrupoId(String grupoId) {
         this.grupoId = grupoId;
+    }
+
+    public String getHistoriaAcademicaId() {
+        return historiaAcademicaId;
+    }
+
+    public void setHistoriaAcademicaId(String historiaAcademicaId) {
+        this.historiaAcademicaId = historiaAcademicaId;
     }
 }

@@ -8,7 +8,8 @@ import androidx.room.ForeignKey;
         foreignKeys = {@ForeignKey(entity = Sede.class,
                                    parentColumns = "id",
                                    childColumns = "sede_id",
-                                   onDelete = ForeignKey.CASCADE)}
+                                   onDelete = ForeignKey.CASCADE)
+                      }
         )
 public class Facultad extends DivisionAdministrativa {
 

@@ -89,6 +89,7 @@ public class InitialInformationDBController {
 
         estudiante.setUsername("ncapdetm");
         estudiante.setPassword("Nicolas123");
+        estudiante.setContrasena("Nicolas123");
         estudiante.setRol("estudiante");
 
         estudiante.setTipoDeIdentidad("CC");
@@ -111,6 +112,7 @@ public class InitialInformationDBController {
 
         docente.setUsername("amorenos");
         docente.setPassword("Antonio123");
+        docente.setContrasena("Antonio123");
         docente.setRol("docente");
 
         docente.setTipoDeIdentidad("CC");

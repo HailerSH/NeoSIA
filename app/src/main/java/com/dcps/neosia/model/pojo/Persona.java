@@ -28,6 +28,8 @@ public class Persona extends User {
     private String tipoDeSangre;
     @NonNull
     private String direccion;
+    @NonNull
+    private String contrasena;
 
     public Persona() {
         super();
@@ -127,5 +129,14 @@ public class Persona extends User {
 
     public void setDireccion(@NonNull String direccion) {
         this.direccion = direccion;
+    }
+
+    @NonNull
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(@NonNull String contrasena) {
+        this.contrasena = contrasena;
     }
 }

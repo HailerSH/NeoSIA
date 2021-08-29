@@ -11,7 +11,12 @@ import com.dcps.neosia.model.EntityBase;
         foreignKeys = {@ForeignKey(entity = Evaluacion.class,
                                    parentColumns = "id",
                                    childColumns = "evaluacion_id",
-                                   onDelete = ForeignKey.CASCADE)}
+                                   onDelete = ForeignKey.CASCADE),
+                       @ForeignKey(entity = Estudiante.class,
+                                   parentColumns = "id",
+                                   childColumns = "estudiante_id",
+                                   onDelete = ForeignKey.CASCADE)
+                       }
         )
 public class Calificacion extends EntityBase {
 
@@ -19,6 +24,8 @@ public class Calificacion extends EntityBase {
     private double valor;
     @ColumnInfo(name = "evaluacion_id")
     private String evaluacionId;
+    @ColumnInfo(name = "estudiante_id")
+    private String estudianteId;
 
     public Calificacion() {
         super();
@@ -38,5 +45,13 @@ public class Calificacion extends EntityBase {
 
     public void setEvaluacionId(String evaluacionId) {
         this.evaluacionId = evaluacionId;
+    }
+
+    public String getEstudianteId() {
+        return estudianteId;
+    }
+
+    public void setEstudianteId(String estudianteId) {
+        this.estudianteId = estudianteId;
     }
 }

@@ -72,7 +72,7 @@ import com.dcps.neosia.model.pojo.User;
                       RequisitoDeAsignatura.class,
                       Sede.class,
                       User.class},
-          version = 5)
+          version = 6)
 @TypeConverters({DateConverter.class})
 public abstract class LocalStorage extends RoomDatabase {
 

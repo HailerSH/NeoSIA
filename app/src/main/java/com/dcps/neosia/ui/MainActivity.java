@@ -20,13 +20,12 @@ import com.dcps.neosia.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
@@ -42,8 +41,15 @@ public class MainActivity extends AppCompatActivity {
                                     .setOpenableLayout(drawer)
                                     .build();
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavController navController = Navigation.findNavController(
+                this,
+                R.id.nav_host_fragment_content_main
+        );
+        NavigationUI.setupActionBarWithNavController(
+                this,
+                navController,
+                mAppBarConfiguration
+        );
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
@@ -56,9 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        NavController navController = Navigation.findNavController(
+                this,
+                R.id.nav_host_fragment_content_main
+        );
+
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
+                        || super.onSupportNavigateUp();
     }
 
     public void signOff(MenuItem item) {
