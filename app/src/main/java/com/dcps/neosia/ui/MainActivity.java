@@ -1,7 +1,9 @@
 package com.dcps.neosia.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.dcps.neosia.R;
 import com.google.android.material.navigation.NavigationView;
@@ -33,13 +35,12 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,
-                R.id.nav_consultar_asignatura,
-                R.id.nav_consultar_historia_academica,
-                R.id.nav_registrar_calificacion)
-                .setOpenableLayout(drawer)
-                .build();
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home,
+                                                               R.id.nav_consultar_asignatura,
+                                                               R.id.nav_consultar_historia_academica,
+                                                               R.id.nav_registrar_calificacion)
+                                    .setOpenableLayout(drawer)
+                                    .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -58,5 +59,11 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void signOff(MenuItem item) {
+        Intent loginActivity = new Intent(this, LoginActivity.class);
+        startActivity(loginActivity);
+        finish();
     }
 }
