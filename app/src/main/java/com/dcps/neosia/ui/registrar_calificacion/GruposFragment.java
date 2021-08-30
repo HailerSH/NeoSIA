@@ -37,7 +37,7 @@ public class GruposFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_grupos, container, false);
 
-        LinearLayout listadoGrupos = (LinearLayout) rootView.findViewById(R.id.listado_grupos);
+        LinearLayout listadoGrupos = rootView.findViewById(R.id.listado_grupos);
 
         RegistrarCalificacionController registrarCalificacionController = new RegistrarCalificacionController(this);
 
@@ -62,6 +62,12 @@ public class GruposFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mViewModel = new ViewModelProvider(this).get(GruposViewModel.class);
+        // TODO: Use the ViewModel
+    }
 
     private void redirectToEstudiantesFragment() {
         FragmentManager fragmentManager = getFragmentManager();
@@ -75,12 +81,5 @@ public class GruposFragment extends Fragment {
         fragmentTransaction.add(R.id.nav_host_fragment_content_main, estudiantesFragment);
 
         fragmentTransaction.commit();
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(GruposViewModel.class);
-        // TODO: Use the ViewModel
     }
 }

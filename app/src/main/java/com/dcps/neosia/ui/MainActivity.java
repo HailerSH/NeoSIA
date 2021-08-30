@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
+    private String rol;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,11 +53,13 @@ public class MainActivity extends AppCompatActivity {
                 mAppBarConfiguration
         );
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        getExtras();
+        showItems();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -68,8 +72,30 @@ public class MainActivity extends AppCompatActivity {
         );
 
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                        || super.onSupportNavigateUp();
+                || super.onSupportNavigateUp();
     }
+
+    private void getExtras() {
+        Intent intent = getIntent();
+        rol = intent.getStringExtra("rol");
+    }
+
+    private void showItems() {
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        Menu menu = navigationView.getMenu();
+
+        if (rol.compareTo("estudiante") == 0) {
+            menu.findItem(R.id.nav_consultar_asignatura).setVisible(true);
+            menu.findItem(R.id.nav_consultar_historia_academica).setVisible(true);
+        } else if (rol.compareTo("docente") == 0) {
+            MenuItem registrarCalificacionItem = menu.findItem(R.id.nav_registrar_calificacion);
+            if (registrarCalificacionItem != null) {
+                registrarCalificacionItem.setVisible(true);
+            }
+        }
+    }
+
+
 
     public void signOff(MenuItem item) {
         Intent loginActivity = new Intent(this, LoginActivity.class);

@@ -11,14 +11,17 @@
         <item
             android:id="@+id/nav_consultar_asignatura"
             android:icon="@drawable/ic_menu_consultar_asignatura"
-            android:title="@string/menu_consultar_asignatura" />
+            android:title="@string/menu_consultar_asignatura"
+            android:visible="false" />
         <item
             android:id="@+id/nav_consultar_historia_academica"
             android:icon="@drawable/ic_menu_consultar_historia_academica"
-            android:title="@string/menu_consultar_historia_academica" />
+            android:title="@string/menu_consultar_historia_academica"
+            android:visible="false" />
         <item
             android:id="@+id/nav_registrar_calificacion"
             android:icon="@drawable/ic_menu_registrar_calificacion"
-            android:title="@string/menu_registrar_calificacion" />
+            android:title="@string/menu_registrar_calificacion"
+            android:visible="false" />
     </group>
 </menu>

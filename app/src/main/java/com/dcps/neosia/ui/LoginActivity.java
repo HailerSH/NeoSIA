@@ -65,7 +65,6 @@ public class LoginActivity extends AppCompatActivity {
     public void loginSucced(String username, String rol) {
         Intent mainActivity = new Intent(this, MainActivity.class);
 
-        mainActivity.putExtra("username", username);
         mainActivity.putExtra("rol", rol);
 
         startActivity(mainActivity);
